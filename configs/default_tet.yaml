@@ -1,0 +1,7 @@
+inherit_from: configs/default.yaml
+
+training: 
+  shape_model: tet
+
+data:
+  dataset_class: TetDataset

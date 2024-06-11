@@ -1,0 +1,7 @@
+inherit_from: configs/default.yaml
+
+training: 
+  shape_model: shell
+
+data:
+  dataset_class: ShellDataset

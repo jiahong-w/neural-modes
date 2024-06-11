@@ -1,0 +1,22 @@
+inherit_from: configs/default_tet.yaml
+method: DenseDecoder
+model:
+  decoder_kwargs:
+    latent_dim: 5
+    hidden_dim: 256
+    n_blocks: 5
+    actvn: gelu
+    
+data:
+  path: datasets/armadillo
+
+training: 
+  batch_size: 256
+  print_every: 1
+  checkpoint_every: 60
+  validate_every: 30
+  checkpoint_dir: checkpoints/tet/armadillo
+  saved_checkpoint: null
+  
+testing:
+  best_checkpoint: null

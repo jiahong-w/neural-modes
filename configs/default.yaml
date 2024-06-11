@@ -1,0 +1,32 @@
+method: Autoencoder
+model:
+  encoder: DenseEncoder
+  encoder_kwargs:
+    latent_dim: 32
+    hidden_dim: 128
+    n_blocks: 2
+  decoder: DenseDecoder
+  decoder_kwargs:
+    latent_dim: 32
+    hidden_dim: 128
+    n_blocks: 2
+data:
+  dataset_class: ShellDataset
+  path: datasets/square
+
+training: 
+  num_epochs: 100000
+  learning_rate: 0.0001
+  batch_size: 512
+  loss: l2
+  optimizer: adam
+  print_every: 1
+  checkpoint_every: 1000
+  validate_every: 1000
+  checkpoint_dir: checkpoints/default
+  saved_checkpoint: null
+  load_saved_optimizer: true
+  tensorboard_dir: tb
+  log_dir: logs
+testing:
+  best_checkpoint: null

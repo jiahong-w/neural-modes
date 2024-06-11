@@ -1,0 +1,21 @@
+inherit_from: configs/default_shell.yaml
+method: DenseDecoder
+model:
+  decoder_kwargs:
+    latent_dim: 3
+    hidden_dim: 64
+    n_blocks: 3
+    actvn: gelu
+    
+data:
+  path: datasets/square
+
+training: 
+  batch_size: 1024
+  print_every: 1
+  checkpoint_every: 100
+  validate_every: 100
+  checkpoint_dir: checkpoints/shell/sheet
+  saved_checkpoint: null
+testing:
+  best_checkpoint: null

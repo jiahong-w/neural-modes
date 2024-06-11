@@ -1,0 +1,9 @@
+.vscode
+**/__pycache__
+checkpoints
+**/.DS_Store
+.ipynb_checkpoints/
+.polyscope.ini
+**/hess.pt
+pretrained
+imgui.ini
